@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center mt-5">{{ name }}'s Ultimate Intramural</h1>
+    </div>
+  </div>
+  <div class="row my-5" *ngFor="let team of teams">
+    <div class="col">
+      <h2>Team: {{ team.teamName }} </h2>
+      <h2>Team Home: {{ team.teamHome }} </h2>
+      <table>
+        <thead>
+          <th>Player Name</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let member of team.players">
+            <td>
+              {{ member }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
